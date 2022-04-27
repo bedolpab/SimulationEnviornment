@@ -1,0 +1,172 @@
+﻿<Page x:Class="SimulationApp.EntityScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimulationApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EntityScreen">
+  <DockPanel x:Name="MainDockPanel">
+    <Grid x:Name="MainGrid" Background="#25274D">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.7*"/>
+        <ColumnDefinition Width="0.3*"/>
+      </Grid.ColumnDefinitions>
+      
+      <Grid x:Name="EntityGrid" Grid.Column="0">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+          </Grid.RowDefinitions>
+          
+          <Grid x:Name="NavigationGrid" Grid.Row="0">
+            <Button x:Name="ReturnButton" Content="3"
+                    Width="100"
+                    HorizontalAlignment="Left"
+                    Background="#25274D"
+                    Foreground="White"
+                    BorderThickness="0"
+                    FontFamily="Marlett"
+                    FontSize="25"
+                    Click="ReturnButton_Click">
+              
+            </Button>
+          </Grid>
+          <Grid x:Name="EntityInformationGrid" Grid.Row="1">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.5*"/>
+              </Grid.RowDefinitions>
+              <Grid x:Name="EntityNameGrid" Grid.Row="0">
+                <Label x:Name="EntityNameLabel" Content="Entity Name"
+                       Foreground="White"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"
+                       FontSize="15"></Label>
+              </Grid>
+              <Grid x:Name="EntityLocationGrid" Grid.Row="1">
+                <Label x:Name="EntityLocationLabel" Content="Location"
+                       Foreground="White"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Top"
+                       FontSize="12"></Label>
+              </Grid>
+              <Grid x:Name="EntityParametersGrid" Grid.Row="2">
+                <UniformGrid x:Name="EntityParametersUniformGrid" Rows="1">
+                  <Label x:Name="EntityParameterOneLabel" Content="Param A"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         Foreground="White"/>
+                  <Label x:Name="EntityParameterTwoLabel" Content="Param B" HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center" Foreground="White"/>
+                  <Label x:Name="EntityParameterThreeLabel" Content="Param C" HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center" Foreground="White"/>
+                </UniformGrid>
+              </Grid>
+              <Grid x:Name="EntityParameterValueGrid" Grid.Row="3">
+                <UniformGrid x:Name="EntityParameterValueUniformGrid" Rows="1">
+                  <Label x:Name="EntityParameterValueOneLabel" Content="0000"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         Foreground="Black"
+                         FontSize="15"
+                         Width="100"
+                         Background="#CCF3D7"/>
+                  <Label x:Name="EntityParameterValueTwoLabel" Content="0000" HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center" Foreground="Black" FontSize="15" Width="100"
+                         Background="#CCF3D7"/>
+                  <Label x:Name="EntityParameterValueThreeLabel" Content="0000" HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center" Foreground="Black" FontSize="15" Width="100"
+                         Background="#CCF3D7"/>
+                </UniformGrid>
+              </Grid>
+              <Grid x:Name="EntityImageGrid" Grid.Row="4">
+                <Image x:Name="EntityImage" Margin="20" Source="Y:\Programming\PROG 201-02\SimulationApp\SimulationApp\louie.jpeg"></Image>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+     
+      <Grid x:Name="StatisticsGrid" Grid.Column="1">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+          </Grid.RowDefinitions>
+          
+          <Grid x:Name="StatisticsLabelGrid" Grid.Row="0"
+                Background="#061101">
+            <Label x:Name="StatisticsLabel" Content="[Entity] Statistics"
+                   Foreground="White"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   ></Label>
+          </Grid>
+          <Grid x:Name="StatisticsParametersGrid" Grid.Row="1"
+                Background="#464866">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+              </Grid.RowDefinitions>
+              
+              <Grid x:Name="ParamOneGrid" Grid.Row="0">
+                <Label x:Name="ParamOneLabel" Content="Population"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+              <Grid x:Name="ParamTwoGrid" Grid.Row="1">
+                <Label x:Name="ParamTwoLabel" Content="Location"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+              <Grid x:Name="ParamThreeGrid" Grid.Row="2">
+                <Label x:Name="ParamThreeLabel" Content="Production Rate"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+              <Grid x:Name="ParamFourGrid" Grid.Row="3">
+                <Label x:Name="ParamFourLabel" Content="Eats"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+              <Grid x:Name="ParamFiveGrid" Grid.Row="4">
+                <Label x:Name="ParamFiveLabel" Content="Danger"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+              <Grid x:Name="ParamSixGrid" Grid.Row="5">
+                <Label x:Name="ParamSixLabel" Content="Lifespan"
+                       Foreground="White"
+                       FontSize="15"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"></Label>
+              </Grid>
+            </Grid>  
+          </Grid>       
+        </Grid>
+      </Grid>
+    </Grid>
+  </DockPanel>
+</Page>

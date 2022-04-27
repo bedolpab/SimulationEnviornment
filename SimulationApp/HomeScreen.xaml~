@@ -1,0 +1,504 @@
+﻿<Page x:Class="SimulationApp.HomeScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimulationApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HomeScreen">
+
+  <DockPanel>
+
+    <Grid Background="#25274D">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.3*"/>
+        <RowDefinition Height="0.7*"/>
+      </Grid.RowDefinitions>
+      <Grid Grid.Row="0">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+          </Grid.ColumnDefinitions>
+          <Button Grid.Column="0" Margin="40" Content="Entity" Background="#061101" Foreground="#2E9CCA" Click="Button_Click">
+            <Button.Resources>
+              <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="5"/>
+                <Style.Triggers>
+                  <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                      <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1"/>
+                      </Setter.Value>
+                    </Setter>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </Button.Resources>
+          </Button>
+          <Button Grid.Column="1"  Margin="40" Content="Seller" Background="#061101" Foreground="#2E9CCA">
+            <Button.Resources>
+              <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="5"/>
+                <Style.Triggers>
+                  <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                      <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1"/>
+                      </Setter.Value>
+                    </Setter>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </Button.Resources>
+          </Button>
+          <Button Grid.Column="2"  Margin="40" Content="[Player Name]" Background="#061101" Foreground="#2E9CCA">
+            <Button.Resources>
+              <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="5"/>
+                <Style.Triggers>
+                  <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                      <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1"/>
+                      </Setter.Value>
+                    </Setter>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </Button.Resources>
+          </Button>
+          <Button Grid.Column="3"  Margin="40" Content="Settings" Background="#061101" Foreground="#2E9CCA" Click="Button_Click_1">
+            <Button.Resources>
+              <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="5"/>
+                <Style.Triggers>
+                  <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                      <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2" Color="Black" Opacity="1"/>
+                      </Setter.Value>
+                    </Setter>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </Button.Resources>
+          </Button>
+        </Grid>
+      </Grid>
+      <Grid Grid.Row="1">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.40*"/>
+            <ColumnDefinition Width="0.60*"/>
+          </Grid.ColumnDefinitions>
+          <Grid Grid.Column="0" Background="#464866" Margin="30">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.88*"/>
+              </Grid.RowDefinitions>
+              <Grid Background="#061101" Grid.Row="0">
+                <Label Content="SIMULATION PARAMETERS"
+                       FontSize="15"
+                       Foreground="White"
+                       HorizontalContentAlignment="Center"
+                       VerticalContentAlignment="Center"/>
+              </Grid>
+              <Grid Grid.Row="1">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                  </Grid.ColumnDefinitions>
+                  <Grid Grid.Column="0">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                      </Grid.RowDefinitions>
+                      <Grid Grid.Row="0">
+                        <Label Content="Harvest Crops:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="1">
+                        <Label Content="Plant Crops:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="2">
+                        <Label Content="Keep Animals Off:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="3">
+                        <Label Content="Insecticide:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="4">
+                        <Label Content="Pesticide:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="5">
+                        <Label Content="Water Crops:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="6">
+                        <Label Content="Use Scarecrow:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="7">
+                        <Label Content="Feed Bats:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="8">
+                        <Label Content="Feed Birds:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                      <Grid Grid.Row="9">
+                        <Label Content="Feed Local Animals:"
+                               FontSize="10"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               Foreground="White"/>
+                      </Grid>
+                    </Grid>
+                   </Grid>
+                  <Grid Grid.Column="1">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.1*"/>
+                      </Grid.RowDefinitions>
+                      <Grid Grid.Row="0" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="1" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="2" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="3" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="4" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="5" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="6" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="7" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="8" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Row="9" Background="Gray">
+                        <Grid HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              >
+                          <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                          </Grid.ColumnDefinitions>
+
+                          <RadioButton Grid.Column="0" Content="On" Margin="5, 0"/>
+                          <RadioButton Grid.Column="1" Content="Off" Margin="5, 0"/>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>               
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid Grid.Column="1" Background="#464866">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.10*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.10*"/>
+              </Grid.RowDefinitions>
+              <Grid Grid.Row="0">
+                <Grid Background="#061101">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.30*"/>
+                    <ColumnDefinition Width="0.30*"/>
+                    <ColumnDefinition Width="0.30*"/>
+                  </Grid.ColumnDefinitions>
+                  <Label 
+                    Grid.Column="0" 
+                    Foreground="White" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Content="Enviornment Data"/>
+                  <Label 
+                    Grid.Column="1" 
+                    Foreground="White" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Content="Sim: [I]"/>
+                  <Label 
+                    Grid.Column="2" 
+                    Foreground="White" 
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Content="TIME: 00:00:00:00"/>
+                </Grid>
+              </Grid>
+              <Grid Grid.Row="1">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                  </Grid.ColumnDefinitions>
+                  <Grid Grid.Column="0">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                      </Grid.RowDefinitions>
+                      <Grid Grid.Row="0">
+                        <Label Content="0"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="1">
+                        <Label Content="1"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="2">
+                        <Label Content="2"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid Grid.Column="1">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                      </Grid.RowDefinitions>
+                      <Grid Grid.Row="0">
+                        <Label Content="0"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="1">
+                        <Label Content="1"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="2">
+                        <Label Content="2"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid Grid.Column="2">
+                    <Grid>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.3*"/>
+                      </Grid.RowDefinitions>
+                      <Grid Grid.Row="0">
+                        <Label Content="0"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="1">
+                        <Label Content="1"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                      <Grid Grid.Row="2">
+                        <Label Content="2"
+                               Foreground="White"
+                               HorizontalContentAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               FontSize="10"/>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid Grid.Row="2">
+                <Image Margin="5" Source="Y:\Programming\PROG 201-02\SimulationApp\SimulationApp\louie.jpeg"></Image>
+              </Grid>
+              <Grid Grid.Row="3">
+                <Label 
+                  Content="Bracken Cave - Comal County, Texas"
+                  HorizontalContentAlignment="Center"
+                  VerticalContentAlignment="Center"
+                  FontSize="15"
+                  Foreground="#2E9CCA"></Label>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  </DockPanel>
+</Page>
